@@ -1,4 +1,4 @@
-Para inicializar: npm i nodemon
+Para inicializar: npm i nodemon <br
 Para executar: nodemon app.js
 Porta: localhost:8000
 Para ver a lista de anúncios: localhost:8000\anuncios
