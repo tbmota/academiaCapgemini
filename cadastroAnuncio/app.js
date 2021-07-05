@@ -19,10 +19,6 @@ app.use(express.static(__dirname + '/public'));
 const anuncios_router = require('./routers/anuncios-router')
 app.use('/anuncios', anuncios_router)
 
-// app.get('/', (req, res) =>{
-//     res.send("Página Inicial")
-// })
-
 app.get('/anuncios', (req, res) =>{
     res.send()
 })

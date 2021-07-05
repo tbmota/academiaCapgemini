@@ -1,6 +1,4 @@
 <%- include('../partials/header'); %>
-<!-- O usuário poderá editar seu cadastro e excluir a sua conta da rede social;-->
-
 
 <div class="container">
     <div class="row">
@@ -23,17 +21,17 @@
 
                 <div class="form-group">
                     <label for="datainicio" class="form-label">Data de Início:</label><br>
-                    <input required type="date" aria-label="Data de Início" id="dataInicio" name="datainicio"/> <!--min="1891-05-06" max="2021-05-06"-->
+                    <input required type="date" aria-label="Data de Início" id="dataInicio" name="datainicio"/> 
                 </div>
 
                 <div class="form-group">
                     <label for="datatermino" class="form-label">Data de Término:</label><br>
-                    <input required type="date" aria-label="Data de Término" id="dataTermino" name="datatermino"/> <!--min="1891-05-06" max="2021-05-06"-->
+                    <input required type="date" aria-label="Data de Término" id="dataTermino" name="datatermino"/> 
                 </div>
 
-                <div class = "form-group">
-                    <p>Investimento por dia: <input autofocus type="text" name="numero" id="val"></p>
-                    <p>Dias: <input type="text" name="numero" id="quant"></p>
+                <div class="form-group">
+                    <label for="investimento" class="form-label">Investimento por dia:</label>
+                    <input required type="number" class="form-control" aria-label="Investimento" id="investimento" name="investimento" placeholder="Digite o investimento por dia">
                 </div>
 
                 <div class = "form-group">

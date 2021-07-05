@@ -1,5 +1,3 @@
-<!--- Deverá exibir em uma página, todos os usuários cadastrados e suas respectivas publicações;-->
-
 <%- include('../partials/header'); %>
 
 <div class="container">
@@ -40,6 +38,8 @@
                 />
             </div>
 
+            <!---------tabela---------->
+
             <div class="table-responsive">
             <table class="table table-sm table-hover table-bordered" >
                
@@ -49,9 +49,10 @@
                         <th>Cliente</th>
                         <th>Data de início</th>
                         <th>Data de término</th>
-                        <th>Investimento por dia</th>
-                        <th>Dias</th>
-                        <th>Relatório</th>
+                        <th>Investimento</th>
+                        <th>Simulação Investimento por dia</th>
+                        <th>Simulação quantidade de dias</th>
+                        <th>Relatório da simulação</th>
                     </tr>
                 </thead>
 
@@ -62,6 +63,7 @@
                         <td><%= anuncio.cliente %></td>
                         <td><%= anuncio.dataInicio %></td>
                         <td><%= anuncio.dataTermino %></td>
+                        <td><%= anuncio.investimento %></td>
                         <td>
                            <input type="text" name="numero" id="val">
                         </td>
@@ -134,7 +136,7 @@ for (i=0; i < tr.length; i++) {
 
         valorItemTabela = td.textContent.toUpperCase()
 
-        if (valorItemTabela.indexOf(filtro) == -1) {  //qual posição se encontra dentro da variável x, se não tiver retorna -1
+        if (valorItemTabela.indexOf(filtro) == -1) {  
 
             tr[i].style.display = "none"
         
