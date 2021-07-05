@@ -1,0 +1,113 @@
+<!--formulário de cadastro de anuncios-->
+
+<%- include('../partials/header'); %>
+<!-- Para utilizar essa nova rede social, o usuário deverá realizar um cadastro;-->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+            <h1 class="mt-5">Cadastre seu anúncio</h1>
+
+            <form class="form mt-4" action="/anuncios/cadastrarAnuncios" method="POST" class="box">
+
+                <div class="form-group">
+                    <label for="anuncio" class="form-label mt-4">Nome do anúncio</label><br>
+                    <input required type="text" class="form-control" aria-label="Nome do anúncio" id="anuncio" name="anuncio" placeholder="Nome do anúncio" >
+
+                </div>
+
+                <div class="form-group">
+                    <label for="cliente" class="form-label">Cliente</label>
+                    <input required type="text" class="form-control" aria-label="Cliente" id="cliente" name="cliente" placeholder="Cliente"> 
+                </div>
+
+                <div class="form-group">
+                    <label for="dataInicio" class="form-label">Data de Início:</label><br>
+                    <input required type="date" aria-label="Data de Início" id="dataInicio" name="dataInicio"/> 
+                </div>
+
+                <div class="form-group">
+                    <label for="dataTermino" class="form-label">Data de Término:</label><br>
+                    <input required type="date" aria-label="Data de Término" id="dataTermino" name="dataTermino"/> 
+                </div>
+
+                <!-- <div class = "form-group">
+                    <p>Investimento por dia: <input autofocus type="text" name="numero" id="val"></p>
+                    <p>Dias: <input type="text" name="numero" id="quant"></p>
+                </div>
+
+                <div class = "form-group">
+                    <input type="submit" value="Calcular" id="calcular">
+                </div>
+                <p id="resultado"></p> -->
+
+                <!-- <div class="form-group">
+                    <label for="investimento" class="form-label">Investimento por dia:</label>
+                    <input required type="number" class="form-control" aria-label="Investimento" id="investimento" name="investimento" placeholder="Digite o investimento por dia">
+                </div>
+
+                <div class="form-group">
+                    <label for="investimento" class="form-label">Quantidade Total de dias:</label>
+                    <input required type="number" class="form-control" aria-label="Investimento" id="totalDias" name="totalDias" placeholder="Quantidade Total de dias">
+                </div> -->
+<!-- 
+                <div class="form-group">
+                    <label for="totalDias" class="form-label">Total Dias:</label>
+                    <p id="totalDias" aria-label="Quantidade Total de dias" name="totalDias"></p> 
+                </div> -->
+
+                <!-- <div class="form-group">
+                    <label for="valorTotal" class="form-label">Valor total investido:</label>
+                    <p id="valorTotal" aria-label="Valor Total Investido" name="valorTotal"></p> 
+                </div> -->
+
+                <!-- <div class="form-group">
+                    <label for="quantVisualização" class="form-label">Quantidade máxima de visualizações:</label>
+                    <p id="quantVisualização" aria-label="Quantidade de Visualizações" name="quantVisualização"></p> 
+                </div>
+
+                <div class="form-group">
+                    <label for="quantClique" class="form-label">Quantidade máxima de cliques:</label>
+                    <p id="quantClique" aria-label="Quantidade de Cliques" name="quantClique"></p> 
+                </div>
+
+                <div class="form-group">
+                    <label for="quantCompartilhamento" class="form-label">Quantidade máxima de compartilhamentos:</label>
+                    <p id="quantCompartilhamento" aria-label= "Quantidade de Compartilhamentos" name="quantCompartilhamento"></p> 
+                </div> -->
+
+                <button type="submit" class="btn mb-3 btn-primary">Cadastrar</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+<!-- 
+<script>
+var calculadora = function() {
+    var val = document.getElementById("val");
+    var quant = document.getElementById("quant");
+
+    document.getElementById('resultado').textContent = 
+        " Em " + quant.value + " dias, com um investimento de R$ " + val.value + ". O valor total investido foi de: R$ " + (val.value * quant.value)
+        + ". A quantidade de visualizações ao anúncio original é de: " + Math.floor((val.value * quant.value) * 30)
+
+        + ". A quantidade de cliques é de: " + Math.floor((((val.value * quant.value) * 30) / 100) * 12)
+        + ". A quantidade de compartilhamentos é: " + Math.floor((((((val.value * quant.value) * 30) / 100) * 12) / 20) * 3)
+        + ". A quantidade de novas visualizações é: " + Math.floor((((((((val.value * quant.value) * 30) / 100) * 12) / 20) * 3))  * 40)
+        + ". A quantidade de total de visualizações é de: " + Math.floor((((((((((val.value * quant.value) * 30) / 100) * 12) / 20) * 3))  * 40) + (val.value * quant.value) * 30))
+        + ". E a quantidade máxima de compartilhamentos em sequência é de: " + Math.floor(((((((((((val.value * quant.value) * 30) / 100) * 12) / 20) * 3))  * 40) + (val.value * quant.value) * 30) * 4))
+ 
+    val.value = '';
+    quant.value = '';
+    val.focus();
+}
+
+var botao = document.getElementById("calcular");
+botao.onclick = calculadora;
+</script> -->
+
+<%- include('../partials/footer'); %>
+

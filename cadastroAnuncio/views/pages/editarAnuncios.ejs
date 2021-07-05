@@ -1,0 +1,51 @@
+<%- include('../partials/header'); %>
+<!-- O usuário poderá editar seu cadastro e excluir a sua conta da rede social;-->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+            <h1 class="mt-5">Editar usuário</h1>
+
+            <form class="form mt-4" action="/anuncios/editarAnuncios" method="POST">
+            
+                <div class="form-group">
+                    <label for="anuncio" class="form-label mt-4">Nome do anúncio</label><br>
+                    <input required type="text" class="form-control" aria-label="Nome do anúncio" id="anuncio" name="anuncio" placeholder="Nome do anúncio" >
+
+                </div>
+
+                <div class="form-group">
+                    <label for="cliente" class="form-label">Cliente</label>
+                    <input required type="text" class="form-control" aria-label="Cliente" id="cliente" name="cliente" placeholder="Cliente"> 
+                </div>
+
+                <div class="form-group">
+                    <label for="datainicio" class="form-label">Data de Início:</label><br>
+                    <input required type="date" aria-label="Data de Início" id="dataInicio" name="datainicio"/> <!--min="1891-05-06" max="2021-05-06"-->
+                </div>
+
+                <div class="form-group">
+                    <label for="datatermino" class="form-label">Data de Término:</label><br>
+                    <input required type="date" aria-label="Data de Término" id="dataTermino" name="datatermino"/> <!--min="1891-05-06" max="2021-05-06"-->
+                </div>
+
+                <div class = "form-group">
+                    <p>Investimento por dia: <input autofocus type="text" name="numero" id="val"></p>
+                    <p>Dias: <input type="text" name="numero" id="quant"></p>
+                </div>
+
+                <div class = "form-group">
+                    <input type="submit" value="Calcular" id="calcular">
+                </div>
+                <p id="resultado"></p>
+
+                <input type="hidden" name="id" value="<%= anuncio._id %>">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer'); %>
